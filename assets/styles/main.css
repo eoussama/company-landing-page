@@ -1,3 +1,80 @@
+::selection {
+    background-color: rgb(238, 238, 238);
+}
+
+/* #region navbar */
 nav.is-transparent {
     background-color: transparent;
 }
+
+div.navbar-start, div.navbar-end {
+    margin-left: 30px;
+}
+
+div.navbar-end {
+    margin-right: 30px;
+}
+
+nav.navbar a {
+    transition-property: color;
+    transition-duration: .3s;
+}
+
+nav.navbar a:hover {
+    color: hsl(0, 0%, 29%) !important;
+}
+
+nav.navbar {
+    top: -50px !important;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+/* #endregion */
+
+/* #region Logo */
+#logo {
+    position: relative;
+    left: -35px;
+    animation-name: slideLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: scale(.95);
+}
+
+#slogan {
+    position: relative;
+    right: -35px;
+    animation-name: slideRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: scale(.95);
+}
+
+@keyframes slideLeft {
+    to {
+        left: 0;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        right: 0;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* #endregion */
