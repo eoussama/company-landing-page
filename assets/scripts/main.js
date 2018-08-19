@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.loadingPanel').style.opacity = '0';
+    setTimeout(() => {
+        document.querySelector('.loadingPanel').style.display = 'none';
+    }, 500);
+    
     const
         navbarBurger = document.querySelector('.navbar-burger'),
         menu = document.getElementById(navbarBurger.dataset.target),
@@ -46,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 'es': 'todos en publicidad',
                 'fr': 'tout dans la publicité'
             },
+            "You have changed the display language.": {
+                'en': 'You have changed the display language.',
+                'es': 'Has cambiado el idioma de la pantalla.',
+                'fr': 'Vous avez modifié la langue d\'affichage.'
+            },
         };
 
     navbarBurger.addEventListener('click', () => {
@@ -64,5 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
     langSelectFr.addEventListener('click', () => {
         translate(document.body, dict, 'fr');
     });
-
 });
